@@ -1,0 +1,15 @@
+{
+  "name": "learn-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Dereje1/learn-webpack.git",
+  "author": "Dereje1 <getahun.d@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack src/js/index.js --output dist/bundle.js --mode development"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
