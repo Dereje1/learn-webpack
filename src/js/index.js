@@ -1,4 +1,4 @@
-import '../css/index.css'
+import '../styles/index.scss';
 import { clicker, display } from './elements';
 
 let id;
