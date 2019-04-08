@@ -6,10 +6,12 @@
   "author": "Dereje1 <getahun.d@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --entry ./src/js/index.js --output-filename ./dist/bundle.js --mode development",
-    "build": "webpack src/js/index.js --output dist/bundle.js --mode development"
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode development"
   },
   "devDependencies": {
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
