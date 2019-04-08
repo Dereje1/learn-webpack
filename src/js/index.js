@@ -1,14 +1,19 @@
 import '../css/index.css'
 import { clicker, display } from './elements';
 
-let clickTimes = 0;
-
-clicker.addEventListener('click',()=>{
-    clickTimes = clickTimes > 50 ?  0 : clickTimes += 1
-    display.innerHTML = `${clickTimes} * ${clickTimes} = ${square(clickTimes)}`
-    clicker.innerHTML = `${clickTimes + 1}${"2".sup()}`
-})
-
+let id;
 function square(params) {
     return params * params;
 }
+
+const runSquares = () =>{
+    let clickTimes = 0;
+    if(id) clearInterval(id)
+    id = setInterval(() => {
+        clickTimes += 1
+        display.innerHTML = `${clickTimes} * ${clickTimes} = ${square(clickTimes)}`
+        if(clickTimes > 50) clearInterval(id)
+    }, 500);
+}
+
+clicker.addEventListener('click',runSquares)
