@@ -1,11 +1,11 @@
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'bundle.js',
-        publicPath: 'dist'
     },
     module: {
         rules: [
@@ -21,7 +21,17 @@ module.exports = {
                 test:/\.(js|jsx)$/,
                 exclude: path.resolve(__dirname,'node_modules'),
                 use: ['babel-loader']
+            },
+            {
+                test:/\.html$/,
+                use: ['html-loader']
             }
         ]
     },
+    plugins: [
+        new HtmlWebPackPlugin({
+            title: 'React Template',
+            template: './public/template.html'
+          })
+    ]
 }

@@ -1,0 +1,14 @@
+#container{
+    color:rgb(42, 18, 129);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#clicker{
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
